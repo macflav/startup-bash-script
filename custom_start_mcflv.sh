@@ -21,7 +21,7 @@ then
 			echo -e ":: Performing full system upgrade..."
 			sudo pacman -Syu
 			echo
-			read -s -t 6 -n 1 -p "Press any key to go back to the menu..."
+			read -s -n 1 -p "Press any key to go back to the menu..."
 			;;
 		C|c|L|l)
 			clear
