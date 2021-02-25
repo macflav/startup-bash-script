@@ -9,7 +9,7 @@ then
 		--title 'Startup Options' \
 		--colors          \
 		--infobox '\n
-		\Z1\Zr C \ZR\Z4ommand \Znor \Z1\Zr L \ZR\Z4inux\Zn to go straight to command line prompt;\n\n
+		\Z1\Zr C \ZR\Z4ommand \Znor \Z1\Zr L \ZR\Z4inux\Zn for command line prompt;\n\n
 		\Z1\Zr U \ZR\Z4pgrade \Znor \Z1\Zr P \ZR\Z4acman\Zn to perform full system upgrade; or\n\n
 		Any other key to start Xfce4...' \
 		9 65
