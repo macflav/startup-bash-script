@@ -39,7 +39,6 @@ then
 		*)
 			clear
 			startxfce4
-			loop=0
 			;;
 		esac
 	done
