@@ -38,6 +38,15 @@ then
 			;;
 		*)
 			clear
+			if ( lsmod | grep "nvidia" &> /dev/null ) && ( test -e /etc/X11/xorg.conf.d/20-nvidia.conf.renamedtousenouveau )
+		        then
+				echo "Using Nvidia proprietary drivers. Config file needed. Enter root password to start Xfce4:"
+				sudo mv /etc/X11/xorg.conf.d/20-nvidia.conf.renamedtousenouveau /etc/X11/xorg.conf.d/20-nvidia.conf
+			elif ( lsmod | grep "nouveau" &> /dev/null ) && ( test -e /etc/X11/xorg.conf.d/20-nvidia.conf )
+			then
+				echo "Using nouveau driver. Nvidia config file found in /etc/X11/xorg.conf.d/ (must be renamed, so it won't be read by the system). Enter root password to confirm:"
+				sudo mv /etc/X11/xorg.conf.d/20-nvidia.conf /etc/X11/xorg.conf.d/20-nvidia.conf.renamedtousenouveau
+			fi
 			startxfce4
 			;;
 		esac
